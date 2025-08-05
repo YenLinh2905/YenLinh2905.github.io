@@ -656,6 +656,40 @@ const Utils = {
     }
 };
 
+// Back to Top Button functionality
+class BackToTop {
+    constructor() {
+        this.button = document.getElementById('backToTop');
+        this.init();
+    }
+
+    init() {
+        if (!this.button) return;
+
+        // Show/hide button on scroll
+        window.addEventListener('scroll', () => {
+            if (window.pageYOffset > 300) {
+                this.button.classList.add('visible');
+            } else {
+                this.button.classList.remove('visible');
+            }
+        });
+
+        // Smooth scroll to top
+        this.button.addEventListener('click', () => {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+    }
+}
+
+// Initialize Back to Top
+document.addEventListener('DOMContentLoaded', () => {
+    new BackToTop();
+});
+
 // Export for module usage if needed
 if (typeof module !== 'undefined' && module.exports) {
     module.exports = {
@@ -668,6 +702,7 @@ if (typeof module !== 'undefined' && module.exports) {
         PerformanceOptimizer,
         ThemeSwitcher,
         Analytics,
-        Utils
+        Utils,
+        BackToTop
     };
 }
