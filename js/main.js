@@ -202,7 +202,7 @@ class ContactForm {
     }
 
     handleSubmit(e) {
-        e.preventDefault();
+        e.preventDefault(); // Prevent default form submission
         
         const formData = new FormData(this.form);
         const data = Object.fromEntries(formData);
@@ -218,25 +218,48 @@ class ContactForm {
         submitBtn.textContent = 'Sending...';
         submitBtn.disabled = true;
 
-        // Simulate form submission (replace with actual endpoint)
-        setTimeout(() => {
-            this.showNotification('Message sent successfully!', 'success');
-            this.form.reset();
-            
-            // Reset button
+        // Submit to Formspree via fetch
+        fetch('https://formspree.io/f/xldlpbpe', {
+            method: 'POST',
+            body: formData,
+            headers: {
+                'Accept': 'application/json'
+            }
+        })
+        .then(response => {
+            if (response.ok) {
+                this.showNotification('Message sent successfully!', 'success');
+                this.form.reset();
+                
+                // Reload page after 2 seconds
+                setTimeout(() => {
+                    window.location.reload();
+                }, 2000);
+            } else {
+                throw new Error('Failed to send message');
+            }
+        })
+        .catch(error => {
+            this.showNotification('Failed to send message. Please try again.', 'error');
+            console.error('Form submission error:', error);
+        })
+        .finally(() => {
+            // Reset button state
             submitBtn.textContent = originalText;
             submitBtn.disabled = false;
-        }, 2000);
+        });
     }
 
     validateForm(data) {
         const errors = [];
         
-        if (!data.name.trim()) errors.push('Name is required');
-        if (!data.email.trim()) errors.push('Email is required');
-        if (!this.isValidEmail(data.email)) errors.push('Valid email is required');
-        if (!data.subject.trim()) errors.push('Subject is required');
-        if (!data.message.trim()) errors.push('Message is required');
+        if (!data.name || !data.name.trim()) errors.push('Name is required');
+        if (!data.email || !data.email.trim()) errors.push('Email is required');
+        if (data.email && !this.isValidEmail(data.email)) errors.push('Valid email is required');
+        if (!data.subject && !data._subject) errors.push('Subject is required');
+        if (data.subject && !data.subject.trim()) errors.push('Subject is required');
+        if (data._subject && !data._subject.trim()) errors.push('Subject is required');
+        if (!data.message || !data.message.trim()) errors.push('Message is required');
         
         if (errors.length > 0) {
             this.showNotification(errors.join(', '), 'error');
@@ -247,6 +270,7 @@ class ContactForm {
     }
 
     isValidEmail(email) {
+        if (!email) return false;
         const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
         return emailRegex.test(email);
     }
