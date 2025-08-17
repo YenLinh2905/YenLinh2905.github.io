@@ -7,6 +7,11 @@
     <meta name="keywords" content="Software Engineer, React, Node.js, Java, Full Stack Developer, Web Development">
     <meta name="author" content="Nguyen Vo Yen Linh">
     <title>Nguyen Vo Yen Linh - Software Engineer Portfolio</title>
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Cdefs%3E%3ClinearGradient id='grad' x1='0%25' y1='0%25' x2='100%25' y2='100%25'%3E%3Cstop offset='0%25' style='stop-color:%23007bff;stop-opacity:1' /%3E%3Cstop offset='100%25' style='stop-color:%230056b3;stop-opacity:1' /%3E%3C/linearGradient%3E%3C/defs%3E%3Ccircle cx='50' cy='50' r='45' fill='url(%23grad)'/%3E%3Ctext x='50' y='60' font-family='Inter, Arial, sans-serif' font-size='32' font-weight='600' fill='white' text-anchor='middle'%3EYL%3C/text%3E%3C/svg%3E">
+    <link rel="shortcut icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Cdefs%3E%3ClinearGradient id='grad' x1='0%25' y1='0%25' x2='100%25' y2='100%25'%3E%3Cstop offset='0%25' style='stop-color:%23007bff;stop-opacity:1' /%3E%3Cstop offset='100%25' style='stop-color:%230056b3;stop-opacity:1' /%3E%3C/linearGradient%3E%3C/defs%3E%3Ccircle cx='50' cy='50' r='45' fill='url(%23grad)'/%3E%3Ctext x='50' y='60' font-family='Inter, Arial, sans-serif' font-size='32' font-weight='600' fill='white' text-anchor='middle'%3EYL%3C/text%3E%3C/svg%3E">
+    
     <link rel="stylesheet" href="styles/main.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
@@ -117,7 +122,7 @@
                             <span class="stat-label">Years Experience</span>
                         </div>
                         <div class="stat-item">
-                            <span class="stat-number">5+</span>
+                            <span class="stat-number">2+</span>
                             <span class="stat-label">Projects Completed</span>
                         </div>
                         <div class="stat-item">
@@ -307,104 +312,60 @@
             </div>
             <div class="projects-grid">
                 <div class="project-card" data-aos="fade-up" data-aos-delay="100">
-                    <div class="project-image">
-                        <div class="project-placeholder">
-                            <i class="fas fa-water"></i>
-                        </div>
-                        <div class="project-overlay">
-                            <div class="project-links">
-                                <a href="#" class="project-link" title="Live Demo">
-                                    <i class="fas fa-external-link-alt"></i>
-                                </a>
-                                <a href="https://github.com/yenlinh139/xamnhapman-reactJS" class="project-link github-frontend" title="Frontend Repository">
-                                    <i class="fab fa-github"></i>
-                                    <span class="link-label">Frontend</span>
-                                </a>
-                                <a href="https://github.com/yenlinh139/xamnhapman-nodeJS" class="project-link github-backend" title="Backend Repository">
-                                    <i class="fas fa-server"></i>
-                                    <span class="link-label">Backend</span>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
                     <div class="project-content">
-                        <h3 class="project-title">WebGIS Salinity Monitoring System</h3>
+                        <h3 class="project-title">WebGIS Salinity Monitoring System (Graduation Thesis)</h3>
+                        <div class="project-links">
+                            <span class="project-links-label">Project Links:</span>
+                            <a href="https://github.com/yenlinh139/xamnhapman-reactJS" class="project-link" title="Frontend Repository">
+                                Frontend Repo
+                            </a>
+                            <span class="project-separator">|</span>
+                            <a href="https://github.com/yenlinh139/xamnhapman-nodeJS" class="project-link" title="Backend Repository">
+                                Backend Repo
+                            </a>
+                        </div>
                         <p class="project-description">
-                            Full-stack GIS web application for salinity intrusion monitoring in Ho Chi Minh City. 
-                            Features interactive maps, real-time data visualization, time-based analysis, and decision support system.
+                            Full-stack WebGIS platform with interactive maps, salinity layers, time-based visualization, and responsive UI. 
+                            Integrated GeoServer with backend APIs for real-time spatial data analysis using AI techniques. 
+                            Features search, filtering, data export, and tested with 1,200+ records under concurrent load.
                         </p>
                         <div class="project-tech">
                             <span class="tech-tag">ReactJS</span>
-                            <span class="tech-tag">Leaflet Maps</span>
+                            <span class="tech-tag">Mapbox/Leaflet</span>
                             <span class="tech-tag">Chart.js</span>
-                            <span class="tech-tag">Node.js</span>
-                            <span class="tech-tag">PostgreSQL</span>
-                            <span class="tech-tag">PostGIS</span>
+                            <span class="tech-tag">Node.js (Fastify)</span>
+                            <span class="tech-tag">PostgreSQL/PostGIS</span>
+                            <span class="tech-tag">Redis</span>
+                            <span class="tech-tag">JWT Auth</span>
+                            <span class="tech-tag">Docker</span>
                         </div>
                     </div>
                 </div>
 
                 <div class="project-card" data-aos="fade-up" data-aos-delay="200">
-                    <div class="project-image">
-                        <div class="project-placeholder">
-                            <i class="fas fa-code"></i>
-                        </div>
-                        <div class="project-overlay">
-                            <div class="project-links">
-                                <a href="#" class="project-link">
-                                    <i class="fas fa-external-link-alt"></i>
-                                </a>
-                                <a href="https://github.com/yenlinh139/TaskGeniusProject" class="project-link">
-                                    <i class="fab fa-github"></i>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
                     <div class="project-content">
                         <h3 class="project-title">FPT Software Academy Project</h3>
+                        <div class="project-links">
+                            <span class="project-links-label">Project Links:</span>
+                            <a href="https://github.com/yenlinh139/TaskGeniusProject" class="project-link" title="GitHub Repository">
+                                GitHub Repo
+                            </a>
+                        </div>
                         <p class="project-description">
-                            Full-stack web application developed during internship at FPT Software Academy. 
-                            Features responsive UI, user authentication, real-time communication, and comprehensive API integration.
+                            Built responsive UI and core features with ReactJS, integrated RESTful APIs and WebSocket for real-time communication. 
+                            Implemented authentication, role-based permissions, and optimized performance. 
+                            Designed user database schema, developed APIs with Fastify, and resolved 20+ bugs.
                         </p>
                         <div class="project-tech">
                             <span class="tech-tag">ReactJS</span>
                             <span class="tech-tag">Redux</span>
-                            <span class="tech-tag">Node.js</span>
-                            <span class="tech-tag">Fastify</span>
-                            <span class="tech-tag">PostgreSQL</span>
-                            <span class="tech-tag">WebSocket</span>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="project-card" data-aos="fade-up" data-aos-delay="300">
-                    <div class="project-image">
-                        <div class="project-placeholder">
-                            <i class="fas fa-globe"></i>
-                        </div>
-                        <div class="project-overlay">
-                            <div class="project-links">
-                                <a href="#" class="project-link">
-                                    <i class="fas fa-external-link-alt"></i>
-                                </a>
-                                <a href="#" class="project-link">
-                                    <i class="fab fa-github"></i>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="project-content">
-                        <h3 class="project-title">GoGoX Business Development Platform</h3>
-                        <p class="project-description">
-                            Web application and CMS-based landing page developed for the Business Development team at GoGoX Vietnam. 
-                            Built with modern frameworks and integrated with existing Java applications.
-                        </p>
-                        <div class="project-tech">
-                            <span class="tech-tag">Next.js</span>
-                            <span class="tech-tag">Java</span>
-                            <span class="tech-tag">Spring MVC</span>
+                            <span class="tech-tag">Node.js (Fastify)</span>
                             <span class="tech-tag">RESTful API</span>
-                            <span class="tech-tag">SQL</span>
+                            <span class="tech-tag">WebSocket</span>
+                            <span class="tech-tag">PostgreSQL</span>
+                            <span class="tech-tag">Docker</span>
+                            <span class="tech-tag">Jira</span>
+                            <span class="tech-tag">Figma</span>
                         </div>
                     </div>
                 </div>
@@ -427,37 +388,34 @@
                         <h4 class="timeline-company">GoGoX Vietnam</h4>
                         <span class="timeline-date">March 2025 - Present</span>
                         <p class="timeline-description">
-                            Developing web applications using Next.js and creating CMS-based landing pages for the Business Development team. 
-                            Implementing new features and maintaining existing Java applications while collaborating with senior developers.
+                            End-to-end development of B2C/B2B logistics web applications with performance optimization and scalable solutions.
                         </p>
                         <ul class="timeline-achievements">
-                            <li>Built responsive web applications with Next.js</li>
-                            <li>Enhanced Java applications using Spring MVC framework</li>
-                            <li>Collaborated in debugging and resolving technical issues</li>
-                            <li>Maintained clean, well-documented codebase</li>
+                            <li>React/Next.js B2C apps - 20% load time reduction with AI-assisted optimization</li>
+                            <li>Responsive UI/UX implementation with Figma design alignment</li>
+                            <li>Java Spring MVC admin platforms - full-stack driver logic updates</li>
+                            <li>CA Version 2 interface design - high-fidelity mockups and prototypes</li>
+                            <li>Code reviews, debugging, and technical documentation</li>
                         </ul>
+                        <div class="timeline-tech">
+                            <span class="tech-tag">React</span>
+                            <span class="tech-tag">Next.js</span>
+                            <span class="tech-tag">HTML5</span>
+                            <span class="tech-tag">CSS3</span>
+                            <span class="tech-tag">JavaScript</span>
+                            <span class="tech-tag">Tailwind CSS</span>
+                            <span class="tech-tag">RESTful API</span>
+                            <span class="tech-tag">Java (Spring MVC)</span>
+                            <span class="tech-tag">JSP</span>
+                            <span class="tech-tag">XML</span>
+                            <span class="tech-tag">MySQL</span>
+                            <span class="tech-tag">Figma</span>
+                            <span class="tech-tag">Jira</span>
+                            <span class="tech-tag">Git</span>
+                            <span class="tech-tag">GitHub</span>
+                        </div>
                     </div>
                 </div>
-
-                <div class="timeline-item" data-aos="fade-left">
-                    <div class="timeline-marker"></div>
-                    <div class="timeline-content">
-                        <h3 class="timeline-title">Software Development Intern</h3>
-                        <h4 class="timeline-company">FPT Software Academy</h4>
-                        <span class="timeline-date">August 2024 - November 2024</span>
-                        <p class="timeline-description">
-                            Developed full-stack web applications using modern technologies. Built responsive UI components, 
-                            integrated APIs, implemented authentication systems, and designed database schemas.
-                        </p>
-                        <ul class="timeline-achievements">
-                            <li>Developed core features using ReactJS and Redux</li>
-                            <li>Integrated RESTful APIs and WebSocket for real-time communication</li>
-                            <li>Fixed 20+ bugs and ensured API reliability with Postman</li>
-                            <li>Earned Professional React Developer Certification</li>
-                        </ul>
-                    </div>
-                </div>
-
                 <div class="timeline-item" data-aos="fade-right">
                     <div class="timeline-marker"></div>
                     <div class="timeline-content">
@@ -473,6 +431,24 @@
                             <li>Ranked Top 5 students in the program</li>
                             <li>Merit-Based Scholarship recipient (2023-2025)</li>
                             <li>Currently working on graduation thesis (WebGIS System)</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="timeline-item" data-aos="fade-left">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content">
+                        <h3 class="timeline-title">Software Development Intern</h3>
+                        <h4 class="timeline-company">FPT Software Academy</h4>
+                        <span class="timeline-date">August 2024 - November 2024</span>
+                        <p class="timeline-description">
+                            Developed full-stack web applications using modern technologies. Built responsive UI components,
+                            integrated APIs, implemented authentication systems, and designed database schemas.
+                        </p>
+                        <ul class="timeline-achievements">
+                            <li>Developed core features using ReactJS and Redux</li>
+                            <li>Integrated RESTful APIs and WebSocket for real-time communication</li>
+                            <li>Fixed 20+ bugs and ensured API reliability with Postman</li>
+                            <li>Earned Professional React Developer Certification</li>
                         </ul>
                     </div>
                 </div>
@@ -636,6 +612,9 @@
                         <a href="https://www.linkedin.com/in/linh-nguyen-139a52339/" class="footer-social-link" target="_blank" aria-label="LinkedIn">
                             <i class="fab fa-linkedin"></i>
                         </a>
+                        <a href="https://www.facebook.com/YenLinh.lhlb" class="footer-social-link" target="_blank" aria-label="Facebook">
+                            <i class="fab fa-facebook"></i>
+                        </a>
                     </div>
                 </div>
                 
@@ -671,7 +650,7 @@
                 <div class="footer-bottom-links">
                     <a href="#about">About</a>
                     <a href="#contact">Contact</a>
-                    <a href="https://github.com/YenLinh2905" target="_blank">GitHub</a>
+                    <a href="https://github.com/yenlinh139" target="_blank">GitHub</a>
                 </div>
             </div>
         </div>
