@@ -143,8 +143,7 @@ class TypingAnimation {
         this.texts = [
             'Software Engineer',
             'React Developer',
-            'Full-Stack Developer',
-            'Java Developer',
+            'Frontend Developer',
             'Problem Solver'
         ];
         this.currentTextIndex = 0;
