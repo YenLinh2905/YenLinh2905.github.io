@@ -357,7 +357,6 @@ p {
 /* ===== SECTION HEADERS ===== */
 .section-header {
     text-align: center;
-    margin-bottom: 4rem;
 }
 
 .section-title {
@@ -733,8 +732,10 @@ p {
 
 .timeline {
     position: relative;
-    max-width: 800px;
+    max-width: 1200px;
     margin: 0 auto;
+    padding: 0 20px;
+    width: 100%;
 }
 
 .timeline::before {
