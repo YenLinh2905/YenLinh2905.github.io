@@ -141,10 +141,11 @@ class TypingAnimation {
     constructor() {
         this.typewriterElement = document.querySelector('.hero-subtitle');
         this.texts = [
-            'Software Engineer',
-            'React Developer',
-            'Frontend Developer',
-            'Problem Solver'
+            'Aspiring Product Manager',
+            'Product-minded Engineer',
+            'User Experience Enthusiast',
+            'Problem Solver',
+            'Tech & Data Driven'
         ];
         this.currentTextIndex = 0;
         this.currentCharIndex = 0;
